@@ -12,3 +12,16 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
+
+
+  //Millennium Force
+  //Goliath
+  //Titan
+
+  //  Cedar Point
+  //  Six Flags Magic Mountain
+  //  Six Flags Over Texas
+
+     //93
+     //85
+    //85
