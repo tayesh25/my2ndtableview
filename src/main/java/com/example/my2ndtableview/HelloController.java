@@ -9,7 +9,7 @@ public class HelloController {
     private Label welcomeText;
 
     public TableColumn left;
-     String name;
+     String name; //a
 
     public TableColumn middle;
     String park;
