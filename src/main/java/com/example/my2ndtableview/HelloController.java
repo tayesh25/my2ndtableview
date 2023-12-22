@@ -6,11 +6,16 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class HelloController {
+
+
     @FXML
     private Label welcomeText;
 
-    public TableView RollarCoasterData;
-    //dsdsadds
+    public TableView RollerCoasterData;
+    public <RollerCoasterData> void initialize() {
+        RollerCoasterData coaster1 = new RollerCoasterData ("", "", "");
+
+    }
 
     public TableColumn left;
      String name;
