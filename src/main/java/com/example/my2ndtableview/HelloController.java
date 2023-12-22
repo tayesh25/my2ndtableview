@@ -3,13 +3,17 @@ package com.example.my2ndtableview;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class HelloController {
     @FXML
     private Label welcomeText;
 
+    public TableView RollarCoasterData;
+    //dsdsadds
+
     public TableColumn left;
-     String name; //a
+     String name;
 
     public TableColumn middle;
     String park;
