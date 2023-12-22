@@ -2,19 +2,21 @@ package com.example.my2ndtableview;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    TableColumn tableColumn1;
+    TableColumn tableColumn2;
+    TableColumn tableColumn3;
 }
 
 
-  //Millennium Force
+
+
+
+
+//Millennium Force
   //Goliath
   //Titan
 
