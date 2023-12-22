@@ -11,9 +11,21 @@ public class HelloController {
     @FXML
     private Label welcomeText;
 
-    public TableView RollerCoasterData;
+    public TableView<RollerCoasterData> myTableView;
     public <RollerCoasterData> void initialize() {
-        RollerCoasterData coaster1 = new RollerCoasterData ("", "", "");
+
+
+        RollerCoasterData coaster1 = new RollerCoasterData("Millienum Force","Cedar Point",93);
+        RollerCoasterData coaster2 = new RollerCoasterData("Goliath","SixFlags MM", 85);
+        RollerCoasterData coaster3 = new RollerCoasterData("Titan","SixFlags OT",85);
+
+        myTableView.getItems().add(coaster1);
+
+        myTableView.getItems().add(coaster2);
+
+        myTableView.getItems().add(coaster3);
+
+
 
     }
 
