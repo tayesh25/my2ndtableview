@@ -28,7 +28,7 @@ public class HelloController {
     }
 
 
-//dsdsdssdsdss
+
     public TableColumn left;
      String name;
 
