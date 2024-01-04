@@ -9,8 +9,6 @@ public class HelloController {
 
 
     @FXML
-    private Label welcomeText;
-
     public TableView<RollerCoasterData> myTableView;
     public void initialize() {
 
@@ -42,10 +40,7 @@ public class HelloController {
 
 
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+
 }
 
 
