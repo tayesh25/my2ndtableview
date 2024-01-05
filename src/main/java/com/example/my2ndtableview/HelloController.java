@@ -4,8 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class HelloController {
+    public TableColumn left;
+    public TableColumn middle;
+    public TableColumn right;
 
 
     @FXML
@@ -23,20 +27,22 @@ public class HelloController {
 
         myTableView.getItems().add(coaster3);
 
+        left.setCellValueFactory(
+                new PropertyValueFactory<>("name"));
+        middle.setCellValueFactory(
+                new PropertyValueFactory<>("park"));
+        right.setCellValueFactory(
+                new PropertyValueFactory<>("Speed"));
 
 
     }
 
 
+    String name;
+    PropertyValueFactory factory =
+            new PropertyValueFactory<>("name");
 
-    public TableColumn left;
-     String name;
 
-    public TableColumn middle;
-    String park;
-
-    public TableColumn right;
-    Integer speed;
 
 
 

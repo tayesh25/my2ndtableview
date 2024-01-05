@@ -2,6 +2,7 @@ package com.example.my2ndtableview;
 
 public class RollerCoasterData {
     String name;
+
     String park;
     Integer speed;
 
