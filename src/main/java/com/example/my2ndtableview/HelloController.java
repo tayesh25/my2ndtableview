@@ -40,11 +40,19 @@ public class HelloController {
 
 
     }
+        public void saveData() throws Exception {
+            File fileForData = new File(".my2ndtableview");
+            FileOutputStream outputStream = new FileOutputStream(fileForData);
+            ObjectOutputStream objOutputStream = new ObjectOutputStream(outputStream);
+            objOutputStream.flush();
+
+            }
+             public void restoreData() {
+
+    }
 
 
-    String name;
-    PropertyValueFactory factory =
-            new PropertyValueFactory<>("name");
+
 
 
 
@@ -53,25 +61,7 @@ public class HelloController {
 
 }
 
-    public void onActionNew() throws Exception {
-        String whatTheUserTyped = textField.getText();
-        listView.getItems().add(whatTheUserTyped);
-        saveData();
-    public void saveData() throws Exception {
-        File fileForData = new File(".tahseen");
-        FileOutputStream outputStream = new FileOutputStream(fileForData);
-        ObjectOutputStream objOutputStream = new ObjectOutputStream(outputStream);
-        objOutputStream.writeObject(list0.size());
-        for (Object imageName : removedImages) {
 
-        }
-
-        objOutputStream.flush();
-    }
-
-    public void restoreData() {
-
-    }
 
 
   //Millennium Force
