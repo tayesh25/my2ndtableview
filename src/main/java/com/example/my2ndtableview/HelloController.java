@@ -6,6 +6,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 public class HelloController {
     public TableColumn left;
     public TableColumn middle;
@@ -49,6 +53,25 @@ public class HelloController {
 
 }
 
+    public void onActionNew() throws Exception {
+        String whatTheUserTyped = textField.getText();
+        listView.getItems().add(whatTheUserTyped);
+        saveData();
+    public void saveData() throws Exception {
+        File fileForData = new File(".tahseen");
+        FileOutputStream outputStream = new FileOutputStream(fileForData);
+        ObjectOutputStream objOutputStream = new ObjectOutputStream(outputStream);
+        objOutputStream.writeObject(list0.size());
+        for (Object imageName : removedImages) {
+
+        }
+
+        objOutputStream.flush();
+    }
+
+    public void restoreData() {
+
+    }
 
 
   //Millennium Force
