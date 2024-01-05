@@ -55,8 +55,13 @@ public class HelloController {
         objOutputStream.close();
         outputStream.close();
     }
+    public void restoreData() throws Exception {
 
-
+        File fileForData = new File("myTableView");
+        FileInputStream inputStream = new FileInputStream(fileForData);
+        ObjectInputStream objInputStream = new ObjectInputStream(inputStream);
+        inputStream.close();
+    }
 
 
 
@@ -69,15 +74,3 @@ public class HelloController {
 
 
 
-
-  //Millennium Force
-  //Goliath
-  //Titan
-
-  //  Cedar Point
-  //  Six Flags Magic Mountain
-  //  Six Flags Over Texas
-
-     //93
-     //85
-    //85
