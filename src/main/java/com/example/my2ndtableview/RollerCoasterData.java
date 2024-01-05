@@ -37,5 +37,8 @@ public class RollerCoasterData {
     }
 
 
-
+    @Override
+    public String toString() {
+        return name + park + speed;
+    }
 }

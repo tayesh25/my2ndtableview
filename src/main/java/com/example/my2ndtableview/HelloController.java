@@ -1,14 +1,12 @@
 package com.example.my2ndtableview;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class HelloController {
     public TableColumn left;
@@ -18,12 +16,16 @@ public class HelloController {
 
     @FXML
     public TableView<RollerCoasterData> myTableView;
+
+    public HelloController() throws IOException {
+    }
+
+
     public void initialize() {
 
-
-        RollerCoasterData coaster1 = new RollerCoasterData("Millienum Force","Cedar Point", 93);
-        RollerCoasterData coaster2 = new RollerCoasterData("Goliath","SixFlags MM", 85);
-        RollerCoasterData coaster3 = new RollerCoasterData("Titan","SixFlags OT", 85);
+        RollerCoasterData coaster1 = new RollerCoasterData("Millienum Force", "Cedar Point", 93);
+        RollerCoasterData coaster2 = new RollerCoasterData("Goliath", "SixFlags MM", 85);
+        RollerCoasterData coaster3 = new RollerCoasterData("Titan", "SixFlags OT", 85);
 
         myTableView.getItems().add(coaster1);
 
@@ -40,16 +42,20 @@ public class HelloController {
 
 
     }
-        public void saveData() throws Exception {
-            File fileForData = new File(".my2ndtableview");
-            FileOutputStream outputStream = new FileOutputStream(fileForData);
-            ObjectOutputStream objOutputStream = new ObjectOutputStream(outputStream);
-            objOutputStream.flush();
 
-            }
-             public void restoreData() {
-
+    public void Saving() throws Exception {
+        FileOutputStream outputStream = new FileOutputStream("Save");
+        ObjectOutputStream objOutputStream = new ObjectOutputStream(outputStream);
+        ObservableList<RollerCoasterData> activities = myTableView.getItems();
+        objOutputStream.writeInt(activities.size());
+        for (RollerCoasterData activity : activities) {
+            objOutputStream.writeObject(activity);
+        }
+        objOutputStream.flush();
+        objOutputStream.close();
+        outputStream.close();
     }
+
 
 
 
